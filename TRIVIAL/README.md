@@ -59,3 +59,6 @@ Este proyecto está diseñado para que los estudiantes aprendan:
 - **Interacción en consola y validaciones de entrada**.
 - **Manejo de estructuras de datos** en Java.
 
+
+
+GIT HUB: https://github.com/algalmo/TRIVIAL.git
