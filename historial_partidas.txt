@@ -1,0 +1,36 @@
+Partida de AAAAA | Fecha y hora: 29-04-2025 21:57 | Puntos: -100
+   Pregunta: ¿Cuál es el deporte más popular del mundo? | Respuesta correcta: false
+   Pregunta: ¿Cuántos jugadores tiene un equipo de fútbol? | Respuesta correcta: false
+   Pregunta: ¿En qué deporte se usa una raqueta? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en Wimbledon? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Super Bowl? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la NBA? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Tour de Francia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Abierto de Australia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Mundial? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la Serie Mundial? | Respuesta correcta: false
+
+Partida de AAAAA | Fecha y hora: 29-04-2025 21:57 | Puntos: -100
+   Pregunta: ¿Cuál es el deporte más popular del mundo? | Respuesta correcta: false
+   Pregunta: ¿Cuántos jugadores tiene un equipo de fútbol? | Respuesta correcta: false
+   Pregunta: ¿En qué deporte se usa una raqueta? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en Wimbledon? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Super Bowl? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la NBA? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Tour de Francia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Abierto de Australia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Mundial? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la Serie Mundial? | Respuesta correcta: false
+
+Partida de AAAAA | Fecha y hora: 29-04-2025 21:57 | Puntos: -100
+   Pregunta: ¿Cuál es el deporte más popular del mundo? | Respuesta correcta: false
+   Pregunta: ¿Cuántos jugadores tiene un equipo de fútbol? | Respuesta correcta: false
+   Pregunta: ¿En qué deporte se usa una raqueta? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en Wimbledon? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Super Bowl? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la NBA? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Tour de Francia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Abierto de Australia? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en el Mundial? | Respuesta correcta: false
+   Pregunta: ¿Qué deporte se juega en la Serie Mundial? | Respuesta correcta: false
+
