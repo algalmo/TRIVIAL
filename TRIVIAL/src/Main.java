@@ -14,6 +14,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.Normalizer;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -172,18 +173,22 @@ public class Main {
 
     
     private static void verificarRespuesta(Pregunta pregunta, String respuestaUsuario, Partida partida) {
-        boolean esCorrecta = pregunta.esRespuestaCorrecta(respuestaUsuario);
-    
+        // Normalizar las cadenas para eliminar tildes y convertir a minúsculas
+        String respuestaUsuarioNormalizada = normalizarCadena(respuestaUsuario);
+        String respuestaCorrectaNormalizada = normalizarCadena(pregunta.getRespuestasCorrectas().get(0)); // Suponiendo una única respuesta correcta
+
+        boolean esCorrecta = respuestaUsuarioNormalizada.equals(respuestaCorrectaNormalizada);
+
         if (esCorrecta) {
             System.out.println(VERDE + "¡Correcto!" + RESET);
             partida.setPuntos(partida.getPuntos() + pregunta.getCategoria().getPuntos());
         } else {
             System.out.println(ROJO + "Incorrecto. Las respuestas correctas son: " + pregunta.getRespuestasCorrectas() + RESET);
-    
+
             // Restar puntos dependiendo de la categoría
             String nombreCategoria = pregunta.getCategoria().getNombre().toLowerCase();
             int puntosARestar = 0;
-    
+
             switch (nombreCategoria) {
                 case "deportes":
                     puntosARestar = 10;
@@ -197,13 +202,29 @@ public class Main {
                 default:
                     System.out.println(ROJO + "Categoría desconocida. No se restarán puntos." + RESET);
             }
-    
+
             partida.setPuntos(partida.getPuntos() - puntosARestar);
             System.out.println(ROJO + "Has perdido " + puntosARestar + " puntos." + RESET);
         }
-    
+
         // Registrar la pregunta respondida
         partida.agregarPreguntaRespondida(pregunta, esCorrecta);
+    }
+
+    /**
+     * Normaliza una cadena eliminando tildes y convirtiéndola a minúsculas.
+     *
+     * @param cadena La cadena a normalizar.
+     * @return La cadena normalizada.
+     */
+    private static String normalizarCadena(String cadena) {
+        if (cadena == null) {
+            return "";
+        }
+        // Eliminar tildes y convertir a minúsculas
+        return Normalizer.normalize(cadena, Normalizer.Form.NFD)
+                .replaceAll("\\p{M}", "") // Elimina los diacríticos (tildes)
+                .toLowerCase();
     }
 
     public static void mostrarHistorial(String nombreFichero) {
