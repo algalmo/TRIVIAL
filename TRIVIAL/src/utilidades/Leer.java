@@ -5,10 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * Clase de utilidades para leer datos desde consola usando BufferedReader.
+ * Clase de utilidades para leer datos desde consola, adaptada para el videojuego Trivial.
  * 
  * @version Final
- * @date 24/04/2025
+ * @date 29/04/2025
  */
 public class Leer {
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -16,13 +16,13 @@ public class Leer {
     /**
      * Lee una cadena de texto desde consola.
      * 
-     * @param mensaje Mensaje que se mostrará al usuario.
-     * @return Cadena ingresada por el usuario.
+     * @param mensaje Mensaje que se mostrará al jugador.
+     * @return Cadena ingresada por el jugador.
      */
     public static String leerString(String mensaje) {
         System.out.print(mensaje);
         try {
-            return reader.readLine();
+            return reader.readLine().trim();
         } catch (IOException e) {
             System.out.println("Error al leer texto. Intenta nuevamente.");
             return leerString(mensaje);
@@ -32,15 +32,15 @@ public class Leer {
     /**
      * Lee un número entero desde consola.
      * 
-     * @param mensaje Mensaje que se mostrará al usuario.
-     * @return Número entero ingresado por el usuario.
+     * @param mensaje Mensaje que se mostrará al jugador.
+     * @return Número entero ingresado por el jugador.
      */
     public static int leerInt(String mensaje) {
         System.out.print(mensaje);
         try {
-            return Integer.parseInt(reader.readLine());
+            return Integer.parseInt(reader.readLine().trim());
         } catch (IOException | NumberFormatException e) {
-            System.out.println("Valor inválido. Introduce un número entero.");
+            System.out.println("⚠️ Entrada inválida. Introduce un número entero.");
             return leerInt(mensaje);
         }
     }
@@ -48,7 +48,7 @@ public class Leer {
     /**
      * Lee un número entero dentro de un rango específico (inclusive).
      * 
-     * @param mensaje Mensaje que se mostrará al usuario.
+     * @param mensaje Mensaje que se mostrará al jugador.
      * @param minimo  Valor mínimo aceptado.
      * @param maximo  Valor máximo aceptado.
      * @return Número entero dentro del rango.
@@ -56,7 +56,7 @@ public class Leer {
     public static int leerIntEntre(String mensaje, int minimo, int maximo) {
         int valor = leerInt(mensaje);
         if (valor < minimo || valor > maximo) {
-            System.out.println("Por favor, elige una opción entre " + minimo + " y " + maximo + ".");
+            System.out.println("⚠️ Por favor, elige una opción entre " + minimo + " y " + maximo + ".");
             return leerIntEntre(mensaje, minimo, maximo);
         }
         return valor;
@@ -65,15 +65,15 @@ public class Leer {
     /**
      * Lee un número decimal (double) desde consola.
      * 
-     * @param mensaje Mensaje que se mostrará al usuario.
-     * @return Número decimal ingresado por el usuario.
+     * @param mensaje Mensaje que se mostrará al jugador.
+     * @return Número decimal ingresado por el jugador.
      */
     public static double leerDouble(String mensaje) {
         System.out.print(mensaje);
         try {
-            return Double.parseDouble(reader.readLine());
+            return Double.parseDouble(reader.readLine().trim());
         } catch (IOException | NumberFormatException e) {
-            System.out.println("Valor inválido. Introduce un número decimal.");
+            System.out.println("⚠️ Entrada inválida. Introduce un número decimal.");
             return leerDouble(mensaje);
         }
     }
@@ -81,8 +81,8 @@ public class Leer {
     /**
      * Lee un valor booleano desde consola.
      * 
-     * @param mensaje Mensaje que se mostrará al usuario.
-     * @return true si el usuario escribe "true" (ignorando mayúsculas/minúsculas),
+     * @param mensaje Mensaje que se mostrará al jugador.
+     * @return true si el jugador escribe "true" (ignorando mayúsculas/minúsculas),
      *         false si escribe "false".
      */
     public static boolean leerBoolean(String mensaje) {
@@ -90,8 +90,22 @@ public class Leer {
         try {
             return Boolean.parseBoolean(reader.readLine().trim());
         } catch (IOException e) {
-            System.out.println("Error al leer el valor. Intenta nuevamente.");
+            System.out.println("⚠️ Error al leer el valor. Intenta nuevamente.");
             return leerBoolean(mensaje);
+        }
+    }
+
+    /**
+     * Pausa el juego hasta que el jugador presione Enter.
+     * 
+     * @param mensaje Mensaje que se mostrará al jugador.
+     */
+    public static void pausar(String mensaje) {
+        System.out.print(mensaje + " (Presiona Enter para continuar...)");
+        try {
+            reader.readLine();
+        } catch (IOException e) {
+            System.out.println("SError al pausar. Intenta nuevamente.");
         }
     }
 }
